@@ -13,7 +13,7 @@ RUN rm /bin/sh && ln -s bash /bin/sh \
      xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev \
      pylint3 xterm \
      ## Extra pkg
-     locales \
+     locales tmux screen libncurses5-dev \
      ## For building poky docs
      make xsltproc docbook-utils fop dblatex xmlto \
      # Clean up
