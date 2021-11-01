@@ -1,14 +1,14 @@
 # Docker composer file for Linux User
 version: '3.2'
 services:
-  sc20-dev-machine:
-    image: bacnh85/yocto-tegra
-    container_name: yocto-tegra
+  yocto-dev:
+    image: bacnh85/yocto-dev
+    container_name: yocto-dev
     environment: 
       - UID=1000
       - GID=1000
     volumes:
-      - ./:/opt
+      - ../:/opt
       - ~/.ssh:/home/1000/.ssh
       - ~/.gitconfig:/home/1000/.gitconfig
     tty: true   

@@ -16,15 +16,10 @@ RUN rm /bin/sh && ln -s bash /bin/sh \
      locales tmux screen libncurses5-dev \
      ## For building poky docs
      make xsltproc docbook-utils fop dblatex xmlto \
+     ## Install kas
+     && pip3 install kas \
      # Clean up
      && rm -rf /var/lib/apt/lists/*
-
-## Insall kas
-RUN cd /tmp \
-    &&  git clone https://github.com/siemens/kas.git \
-    &&  cd kas \
-    &&  pip3 install .
- 
 
 # Setup the environment
 RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
